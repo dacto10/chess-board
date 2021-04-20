@@ -1,9 +1,9 @@
-import { COLOR, PIECES } from "../types";
+import { COLOR } from "../types";
 import IPosition from "./IPosition";
 
 export default interface IPiece {
     color: COLOR;
-    type: PIECES;
     position: IPosition;
-    move: (position: IPosition) => void;
+    move?: (position: IPosition) => void;
+    canMove?: (position: IPosition) => boolean;
 }
